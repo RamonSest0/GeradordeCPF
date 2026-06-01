@@ -28,6 +28,8 @@ O primeiro dígito do CPF é 7
 cpf = '188956410'
 multiplicador = 10
 digitos_multiplicados = []
+soma_digitos = 0
+
 
 for i, digito in enumerate(cpf):
 
@@ -39,4 +41,14 @@ for i, digito in enumerate(cpf):
 print(digitos_multiplicados)
 
 for digito in digitos_multiplicados:
-    ... 
+    soma_digitos = digito + soma_digitos
+
+resultado_multiplicado = soma_digitos * 10
+resultado_final = resultado_multiplicado % 11
+
+if resultado_final > 9:
+    resultado_final = 0
+
+print(f'O primeiro digito do CPF é: {resultado_final}')
+
+
