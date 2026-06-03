@@ -26,21 +26,24 @@ O primeiro dígito do CPF é 7
 
 # 188.956.410-94
 cpf = '188956410'
-multiplicador = 10
-digitos_multiplicados = []
-soma_digitos = 0
+multiplicador_digito_1 = 10
+multiplicador_digito_1 = 11
+digitos_multiplicados_1 = []
+digitos_multiplicados_2 = []
+soma_digitos_1 = 0
+soma_digitos_2 = 0
 
 
-for i, digito in enumerate(cpf):
+for digito in cpf:
 
-    resultado_digito = int(digito) * multiplicador
-    digitos_multiplicados.append(resultado_digito)
+    resultado_digito = int(digito) * multiplicador_digito_1
+    digitos_multiplicados_1.append(resultado_digito)
     
-    multiplicador -= 1
+    multiplicador_digito_1 -= 1
 
-print(digitos_multiplicados)
+print(digitos_multiplicados_1)
 
-for digito in digitos_multiplicados:
+for digito in digitos_multiplicados_1:
     soma_digitos = digito + soma_digitos
 
 resultado_multiplicado = soma_digitos * 10
