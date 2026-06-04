@@ -8,7 +8,7 @@ contagem regressiva começando de 11
 
 Ex.:  746.824.890-70 (7468248907)
    11 10  9  8  7  6  5  4  3  2
-*  7   4  6  8  2  4  8  9  0  7 <-- PRIMEIRO DIGITO
+*  7   4  6  8  2  4  8  9  0  7 <-- PRIMEIRO DIGITO / como repetir o primeiro digito?
    77 40 54 64 14 24 40 36  0 14
 
 Somar todos os resultados:
