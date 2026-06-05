@@ -25,33 +25,33 @@ O primeiro dígito do CPF é 7
 """
 
 # 188.956.410-94
-cpf = '188956410'
+cpf = '746824890'
 multiplicador_digito_1 = 10
-multiplicador_digito_1 = 11
-digitos_multiplicados_1 = []
-digitos_multiplicados_2 = []
-soma_digitos_1 = 0
-soma_digitos_2 = 0
-
+multiplicador_digito_2 = 11
+resultado_digito_1 = 0
+resultado_digito_2 = 0
 
 for digito in cpf:
 
-    resultado_digito = int(digito) * multiplicador_digito_1
-    digitos_multiplicados_1.append(resultado_digito)
-    
+    resultado_digito_1 += int(digito) * multiplicador_digito_1
     multiplicador_digito_1 -= 1
+    print(resultado_digito_1)
 
-print(digitos_multiplicados_1)
+digito_1 = (resultado_digito_1 * 10) % 11
+if digito_1 > 9:
+    digito_2 = 0
 
-for digito in digitos_multiplicados_1:
-    soma_digitos = digito + soma_digitos
+print(f'O primeiro digito do CPF é: {digito_1}')
 
-resultado_multiplicado = soma_digitos * 10
-resultado_final = resultado_multiplicado % 11
+for digito in cpf + str(digito_1):
 
-if resultado_final > 9:
-    resultado_final = 0
+    resultado_digito_2 += int(digito) * multiplicador_digito_2
+    multiplicador_digito_2 -= 1
+    print(resultado_digito_2)
+    
+digito_2 = (resultado_digito_2 * 10) % 11
 
-print(f'O primeiro digito do CPF é: {resultado_final}')
+if digito_2 > 9:
+    digito_2 = 0
 
-
+print(f'O segundo digito do CPF é: {digito_2}')
