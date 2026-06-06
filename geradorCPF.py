@@ -22,9 +22,10 @@ contrário disso:
     resultado é o valor da conta
 
 O primeiro dígito do CPF é 7
+
+proximo passo - validar um CPF inteiro
 """
 
-# 188.956.410-94
 cpf = '746824890'
 multiplicador_digito_1 = 10
 multiplicador_digito_2 = 11
@@ -39,7 +40,7 @@ for digito in cpf:
 
 digito_1 = (resultado_digito_1 * 10) % 11
 if digito_1 > 9:
-    digito_2 = 0
+    digito_1 = 0
 
 print(f'O primeiro digito do CPF é: {digito_1}')
 
